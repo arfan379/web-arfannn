@@ -1,4 +1,4 @@
-import type { Profile, Experience, Project, AcademicProject, ToolGroup } from '../types';
+import type { Profile, Experience, Project, AcademicProject, ToolItem } from '../types';
 
 export const profile: Profile = {
   name: 'Arfan Indra Kurniawan',
@@ -124,73 +124,106 @@ export const academicProjects: AcademicProject[] = [
   },
 ];
 
-export const toolGroups: ToolGroup[] = [
+export const tools: ToolItem[] = [
   {
-    category: 'Bahasa & Analisis',
-    tools: [
-      { name: 'Python', icon: '🐍' },
-      { name: 'SQL', icon: '🗃️' },
-      { name: 'TypeScript', icon: '📘' },
-      { name: 'JavaScript', icon: '⚡' },
-      { name: 'R', icon: '📊' },
-      { name: 'Pandas', icon: '🐼' },
-      { name: 'NumPy', icon: '🔢' },
-      { name: 'Matplotlib', icon: '📈' },
-    ],
+    name: 'Python',
+    logo: '/assets/tools/python.svg',
+    description: 'Bahasa pemrograman utama untuk data engineering, backend API, computer vision, dan machine learning.',
   },
   {
-    category: 'Database & Storage',
-    tools: [
-      { name: 'PostgreSQL', icon: '🐘' },
-      { name: 'MySQL', icon: '🐬' },
-      { name: 'MongoDB', icon: '🍃' },
-      { name: 'Redis', icon: '🔴' },
-      { name: 'PostGIS', icon: '🌍' },
-      { name: 'SQLite', icon: '📦' },
-    ],
+    name: 'PostgreSQL',
+    logo: '/assets/tools/postgresql.svg',
+    description: 'Database relasional untuk query analitik kompleks, perancangan skema data, dan sistem produksi.',
   },
   {
-    category: 'Data Engineering & BI',
-    tools: [
-      { name: 'Apache Airflow', icon: '🌀' },
-      { name: 'Apache Kafka', icon: '📡' },
-      { name: 'Apache Spark', icon: '✨' },
-      { name: 'dbt', icon: '🔧' },
-      { name: 'Grafana', icon: '📊' },
-      { name: 'Metabase', icon: '📋' },
-    ],
+    name: 'Apache Airflow',
+    logo: '/assets/tools/airflow.svg',
+    description: 'Platform orkestrasi workflow untuk mengotomatisasi, menjadwalkan, dan memantau pipeline ETL/ELT.',
   },
   {
-    category: 'Container & Infrastruktur',
-    tools: [
-      { name: 'Docker', icon: '🐳' },
-      { name: 'Docker Compose', icon: '🐋' },
-      { name: 'Git', icon: '📂' },
-      { name: 'GitHub', icon: '🐙' },
-      { name: 'Linux', icon: '🐧' },
-      { name: 'Nginx', icon: '🌐' },
-    ],
+    name: 'Apache Kafka',
+    logo: '/assets/tools/kafka.svg',
+    description: 'Distributed event streaming platform untuk ingestion dan pemrosesan data clickstream real-time.',
   },
   {
-    category: 'AI / ML',
-    tools: [
-      { name: 'TensorFlow', icon: '🧠' },
-      { name: 'PyTorch', icon: '🔥' },
-      { name: 'OpenCV', icon: '👁️' },
-      { name: 'YOLO', icon: '🎯' },
-      { name: 'Scikit-learn', icon: '🔬' },
-      { name: 'Hugging Face', icon: '🤗' },
-    ],
+    name: 'FastAPI',
+    logo: '/assets/tools/fastapi.svg',
+    description: 'Modern backend web framework Python dengan performa tinggi untuk membangun RESTful API.',
   },
   {
-    category: 'Platform',
-    tools: [
-      { name: 'FastAPI', icon: '⚡' },
-      { name: 'React', icon: '⚛️' },
-      { name: 'Vite', icon: '🚀' },
-      { name: 'Vercel', icon: '▲' },
-      { name: 'Google Colab', icon: '📓' },
-      { name: 'VS Code', icon: '💻' },
-    ],
+    name: 'Docker',
+    logo: '/assets/tools/docker.svg',
+    description: 'Platform kontainerisasi untuk standardisasi deployment, isolasi dependency, dan skalabilitas aplikasi.',
+  },
+  {
+    name: 'TensorFlow',
+    logo: '/assets/tools/tensorflow.svg',
+    description: 'Framework deep learning untuk melatih dan mengoptimasi model deteksi objek serta klasifikasi.',
+  },
+  {
+    name: 'PyTorch',
+    logo: '/assets/tools/pytorch.svg',
+    description: 'Framework deep learning fleksibel untuk eksperimen model kecerdasan buatan dan neural network.',
+  },
+  {
+    name: 'OpenCV',
+    logo: '/assets/tools/opencv.svg',
+    description: 'Library computer vision untuk pengolahan citra real-time, deteksi cacat, dan inspeksi visual.',
+  },
+  {
+    name: 'Scikit-learn',
+    logo: '/assets/tools/scikitlearn.svg',
+    description: 'Tools machine learning untuk analisis prediktif, clustering data, regresi, dan preprocessing.',
+  },
+  {
+    name: 'Metabase',
+    logo: '/assets/tools/metabase.svg',
+    description: 'Platform business intelligence untuk pembuatan dashboard analitik interaktif dan monitoring KPI.',
+  },
+  {
+    name: 'Grafana',
+    logo: '/assets/tools/grafana.svg',
+    description: 'Visualisasi metrik dan observabilitas real-time untuk memantau performa sistem dan pipeline data.',
+  },
+  {
+    name: 'dbt',
+    logo: '/assets/tools/dbt.svg',
+    description: 'Alat transformasi data modular untuk mengolah data langsung di dalam data warehouse.',
+  },
+  {
+    name: 'React',
+    logo: '/assets/tools/react.svg',
+    description: 'Library frontend modern untuk membangun antarmuka pengguna interaktif dan dashboard aplikasi.',
+  },
+  {
+    name: 'TypeScript',
+    logo: '/assets/tools/typescript.svg',
+    description: 'Superset JavaScript dengan static typing untuk pengembangan kode yang aman dan minim bug.',
+  },
+  {
+    name: 'Pandas',
+    logo: '/assets/tools/pandas.svg',
+    description: 'Library manipulasi data tabel dan analisis struktur data komprehensif dalam ekosistem Python.',
+  },
+  {
+    name: 'Redis',
+    logo: '/assets/tools/redis.svg',
+    description: 'In-memory data store berkecepatan tinggi untuk caching, session management, dan message broker.',
+  },
+  {
+    name: 'MySQL',
+    logo: '/assets/tools/mysql.svg',
+    description: 'Relational database management system untuk penyimpanan dan manajemen transaksi data aplikasi.',
+  },
+  {
+    name: 'Git & GitHub',
+    logo: '/assets/tools/git.svg',
+    description: 'Sistem version control untuk manajemen kode sumber, pelacakan perubahan, dan kolaborasi tim.',
+  },
+  {
+    name: 'Linux',
+    logo: '/assets/tools/linux.svg',
+    description: 'Sistem operasi server standar industri untuk manajemen infrastruktur, deployment, dan automasi skrip.',
   },
 ];
+

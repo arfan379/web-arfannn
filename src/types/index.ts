@@ -40,12 +40,9 @@ export interface AcademicProject {
   linkLabel: string;
 }
 
-export interface Tool {
+export interface ToolItem {
   name: string;
-  icon: string;
+  logo: string;
+  description: string;
 }
 
-export interface ToolGroup {
-  category: string;
-  tools: Tool[];
-}

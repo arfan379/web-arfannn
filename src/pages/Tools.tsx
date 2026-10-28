@@ -1,41 +1,29 @@
 import Seo from '../components/Seo';
 import SectionHeading from '../components/SectionHeading';
-import ScrollReveal from '../components/ScrollReveal';
 import SkillBadge from '../components/SkillBadge';
-import { toolGroups } from '../data/data';
+import { tools } from '../data/data';
 
 export default function Tools() {
   return (
     <div className="page-transition">
       <Seo
-        title="Tools yang Dikuasai"
-        description="Daftar teknologi dan tools yang dikuasai Arfan Indra Kurniawan."
+        title="Tools & Stack"
+        description="Daftar teknologi, bahasa pemrograman, dan tools yang dikuasai Arfan Indra Kurniawan."
       />
 
       <section className="section-container">
         <SectionHeading
-          title="Tools yang Dikuasai"
-          subtitle="Teknologi dan alat yang saya gunakan sehari-hari"
+          title="Tools & Technologies"
+          subtitle="Teknologi, bahasa pemrograman, dan framework yang saya gunakan sehari-hari"
         />
 
-        <div className="max-w-4xl mx-auto space-y-12">
-          {toolGroups.map((group, gi) => (
-            <ScrollReveal key={group.category} delay={gi * 0.1}>
-              <div>
-                <h3 className="font-display text-lg font-bold mb-5 flex items-center gap-3" style={{ color: 'var(--color-text)' }}>
-                  <span className="w-8 h-0.5 rounded-full" style={{ backgroundColor: 'var(--color-brand)' }} />
-                  {group.category}
-                </h3>
-                <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3">
-                  {group.tools.map((tool, ti) => (
-                    <SkillBadge key={tool.name} name={tool.name} icon={tool.icon} index={ti} />
-                  ))}
-                </div>
-              </div>
-            </ScrollReveal>
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {tools.map((tool, i) => (
+            <SkillBadge key={tool.name} tool={tool} index={i} />
           ))}
         </div>
       </section>
     </div>
   );
 }
+
