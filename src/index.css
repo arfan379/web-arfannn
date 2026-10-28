@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: #f8f7ff;
+    --color-surface: #ffffff;
+    --color-surface-hover: #f5f0ff;
+    --color-text: #1e1f24;
+    --color-text-secondary: #60636c;
+    --color-border: #e2e3e5;
+    --color-brand: #8b45ff;
+    --color-brand-glow: rgba(139, 69, 255, 0.15);
+  }
+
+  .dark {
+    --color-bg: #0c0d0f;
+    --color-surface: #1e1f24;
+    --color-surface-hover: #2a2b30;
+    --color-text: #f6f6f7;
+    --color-text-secondary: #9fa2a9;
+    --color-border: #3e4046;
+    --color-brand: #a67aff;
+    --color-brand-glow: rgba(166, 122, 255, 0.2);
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-brand) transparent;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  ::selection {
+    background-color: var(--color-brand);
+    color: white;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+  }
+
+  .glass-card:hover {
+    border-color: var(--color-brand);
+    box-shadow: 0 8px 32px var(--color-brand-glow);
+    transform: translateY(-2px);
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #8b45ff, #c4abff, #6d11e3);
+    background-size: 200% 200%;
+    animation: gradient-shift 4s ease infinite;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white transition-all duration-300;
+    background: linear-gradient(135deg, #8b45ff, #6d11e3);
+    box-shadow: 0 4px 20px rgba(139, 69, 255, 0.3);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 6px 30px rgba(139, 69, 255, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300;
+    color: var(--color-brand);
+    border: 2px solid var(--color-brand);
+    background: transparent;
+  }
+
+  .btn-secondary:hover {
+    background: var(--color-brand);
+    color: white;
+    box-shadow: 0 6px 30px rgba(139, 69, 255, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24;
+  }
+
+  .page-transition {
+    @apply min-h-screen;
+  }
+
+  .chip {
+    @apply inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 cursor-pointer;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+  }
+
+  .chip:hover,
+  .chip.active {
+    background: var(--color-brand);
+    color: white;
+    border-color: var(--color-brand);
+    box-shadow: 0 2px 12px var(--color-brand-glow);
+  }
+
+  .tech-badge {
+    @apply inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs font-medium;
+    background: var(--color-brand-glow);
+    color: var(--color-brand);
+  }
+}
+
+@layer utilities {
+  @keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 4s ease infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

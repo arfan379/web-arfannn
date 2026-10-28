@@ -1,0 +1,214 @@
+import type { Profile, Experience, Project, AcademicProject, ToolGroup } from '../types';
+
+export const profile: Profile = {
+  name: 'Arfan Indra Kurniawan',
+  headline: 'AI Developer · Data Engineer · Data Analysis',
+  location: 'Klaten, Jawa Tengah',
+  phone: '+6285743900034',
+  email: 'arfanindrakurniawan@gmail.com',
+  linkedin: 'https://www.linkedin.com/in/arfan-indra-kurniawan/',
+  linkedinLabel: 'Arfan Indra Kurniawan',
+  summary: [
+    'Saya adalah seorang AI Developer dan Data Engineer yang berfokus pada pengembangan solusi berbasis kecerdasan buatan, pipeline data, dan analisis data. Saat ini bekerja di Frontier Group sebagai Data Engineer, merancang dan mengelola pipeline ETL/ELT serta melakukan labelling data menggunakan LLM.',
+    'Sebelumnya, selama satu tahun magang di CV Karya Hidup Sentosa, saya membangun sistem Computer Vision untuk inspeksi visual produk, mengembangkan pipeline data engineering dengan Apache Airflow dan PostgreSQL, serta membangun dashboard analitik dan aplikasi web.',
+    'Saya menguasai berbagai teknologi mulai dari Python, SQL, TensorFlow, hingga Docker dan Apache Kafka. Saya selalu bersemangat untuk belajar dan mengembangkan solusi teknologi yang berdampak.'
+  ],
+  photo: '/assets/profile/arfan.webp',
+};
+
+export const experiences: Experience[] = [
+  {
+    role: 'Data Engineer',
+    company: 'Frontier Group',
+    period: 'Juli 2026 – Sekarang',
+    logo: '/assets/logos/frontier.png',
+    groups: [
+      {
+        points: [
+          'Merancang dan membangun pipeline ETL/ELT untuk mengolah dan mengintegrasikan data dari berbagai sumber.',
+          'Melakukan labelling data menggunakan Large Language Model (LLM) untuk mempercepat proses anotasi data.',
+          'Mendesain skema data dan model data yang optimal untuk kebutuhan analitik dan machine learning.',
+          'Monitoring dan optimasi performa pipeline data secara berkelanjutan.',
+          'Berkolaborasi dengan tim data science dan engineering untuk memastikan kualitas dan ketersediaan data.',
+        ],
+      },
+    ],
+  },
+  {
+    role: 'Internship AI & Data Engineer',
+    company: 'CV Karya Hidup Sentosa',
+    period: 'Mei 2025 – Mei 2026',
+    logo: '/assets/logos/karya-hidup-sentosa.png',
+    groups: [
+      {
+        category: 'Computer Vision & AI',
+        points: [
+          'Membangun sistem inspeksi visual produk menggunakan kamera industri dan computer vision (OpenCV, YOLO, TensorFlow).',
+          'Melatih dan mengoptimasi model deteksi objek serta klasifikasi cacat produk.',
+          'Mengembangkan pipeline inferensi real-time yang efisien untuk lini produksi.',
+        ],
+      },
+      {
+        category: 'Data Engineering & Analytics',
+        points: [
+          'Merancang dan mengimplementasikan pipeline data dengan Apache Airflow dan PostgreSQL.',
+          'Membangun ETL untuk mengonsolidasi data produksi dari berbagai mesin dan sensor.',
+          'Membuat dashboard analitik menggunakan Grafana dan Metabase untuk monitoring KPI produksi.',
+        ],
+      },
+      {
+        category: 'Web Development & Database',
+        points: [
+          'Mengembangkan aplikasi web internal menggunakan FastAPI (backend) dan React (frontend).',
+          'Mendesain dan mengelola database PostgreSQL untuk sistem manajemen produksi.',
+          'Membuat RESTful API untuk integrasi antar sistem.',
+        ],
+      },
+      {
+        category: 'Deployment & Kolaborasi',
+        points: [
+          'Melakukan deployment aplikasi menggunakan Docker dan Docker Compose.',
+          'Mengelola version control dengan Git dan berkolaborasi melalui GitHub.',
+          'Mendokumentasikan proses dan prosedur teknis untuk tim.',
+        ],
+      },
+    ],
+  },
+];
+
+export const projects: Project[] = [
+  {
+    slug: 'simulasi-quantum-finance',
+    title: 'Simulasi Quantum Finance',
+    summary: 'Platform simulasi keuangan menggunakan komputasi kuantum untuk optimasi portofolio dan analisis risiko.',
+    description: 'Platform simulasi keuangan menggunakan komputasi kuantum untuk optimasi portofolio dan analisis risiko. Proyek ini mengimplementasikan algoritma quantum computing seperti QAOA dan VQE untuk menyelesaikan masalah optimasi portofolio keuangan. Dibangun dengan Python, Qiskit, dan FastAPI sebagai backend, serta React untuk dashboard interaktif.',
+    tech: ['Python', 'Qiskit', 'FastAPI', 'React', 'PostgreSQL'],
+    category: ['AI/ML', 'Finance', 'Quantum Computing'],
+    github: 'https://github.com/arfanindra',
+  },
+  {
+    slug: 'magma-iq',
+    title: 'MAGMA-IQ',
+    summary: 'Sistem intelligent quality control berbasis AI untuk monitoring dan analisis kualitas produk secara real-time.',
+    description: 'MAGMA-IQ (Manufacturing Automated Grading & Monitoring Analytics - Intelligent Quality) adalah sistem intelligent quality control berbasis AI. Sistem ini menggunakan computer vision dan deep learning untuk mendeteksi cacat produk secara otomatis pada lini produksi. Dilengkapi dengan dashboard monitoring real-time dan sistem alerting.',
+    tech: ['Python', 'TensorFlow', 'OpenCV', 'FastAPI', 'PostgreSQL', 'Docker'],
+    category: ['AI/ML', 'Computer Vision', 'Manufacturing'],
+    github: 'https://github.com/arfanindra',
+  },
+  {
+    slug: 'siaga-api',
+    title: 'SIAGA-API',
+    summary: 'RESTful API untuk sistem informasi dan pengelolaan data bencana alam Indonesia secara real-time.',
+    description: 'SIAGA-API (Sistem Informasi dan Analisis Geospasial API) adalah RESTful API untuk sistem informasi dan pengelolaan data bencana alam Indonesia secara real-time. Menyediakan endpoint untuk data gempa bumi, cuaca, dan peringatan dini. Dibangun dengan FastAPI dan menggunakan PostgreSQL dengan PostGIS untuk query geospasial.',
+    tech: ['Python', 'FastAPI', 'PostgreSQL', 'PostGIS', 'Docker', 'Redis'],
+    category: ['Backend', 'Geospatial', 'API'],
+    github: 'https://github.com/arfanindra',
+  },
+  {
+    slug: 'itma',
+    title: 'ITMA',
+    summary: 'Integrated Transportation Management & Analytics — platform analisis dan optimasi transportasi berbasis data.',
+    description: 'ITMA (Integrated Transportation Management & Analytics) adalah platform analisis dan optimasi transportasi berbasis data. Menggunakan Apache Kafka untuk streaming data real-time, Apache Airflow untuk orchestrasi pipeline, dan dbt untuk transformasi data. Dashboard dibangun dengan React dan Grafana.',
+    tech: ['Apache Kafka', 'Apache Airflow', 'dbt', 'PostgreSQL', 'React', 'Docker', 'Grafana'],
+    category: ['Data Engineering', 'Analytics', 'Transportation'],
+    github: 'https://github.com/arfanindra',
+  },
+];
+
+export const academicProjects: AcademicProject[] = [
+  {
+    title: 'Clustering Genre Musik',
+    description: 'Analisis dan pengelompokan genre musik menggunakan teknik machine learning clustering (K-Means, DBSCAN) berdasarkan fitur audio seperti tempo, energy, dan danceability dari dataset Spotify.',
+    link: 'https://colab.research.google.com/',
+    linkLabel: 'Buka di Google Colab',
+  },
+  {
+    title: 'Analisis Tren Suhu Kota Yogyakarta (Mann-Kendall)',
+    description: 'Analisis tren perubahan suhu di Kota Yogyakarta menggunakan uji statistik Mann-Kendall untuk mendeteksi tren monoton dalam data time series suhu selama 20 tahun terakhir.',
+    link: 'https://colab.research.google.com/',
+    linkLabel: 'Buka di Google Colab',
+  },
+  {
+    title: 'Analisis Urbanisasi di Indonesia',
+    description: 'Studi komprehensif tentang pola urbanisasi di Indonesia menggunakan data BPS, visualisasi geospasial, dan analisis statistik untuk memahami perpindahan penduduk dari desa ke kota.',
+    link: 'https://www.linkedin.com/in/arfan-indra-kurniawan/',
+    linkLabel: 'Lihat di LinkedIn',
+  },
+  {
+    title: 'Real-Time E-Commerce Clickstream Analytics Pipeline',
+    description: 'Pipeline data engineering untuk menganalisis clickstream e-commerce secara real-time menggunakan Apache Kafka, Apache Spark Streaming, dan PostgreSQL. Dilengkapi dashboard Grafana untuk monitoring.',
+    link: 'https://github.com/arfanindra',
+    linkLabel: 'Lihat di GitHub',
+  },
+];
+
+export const toolGroups: ToolGroup[] = [
+  {
+    category: 'Bahasa & Analisis',
+    tools: [
+      { name: 'Python', icon: '🐍' },
+      { name: 'SQL', icon: '🗃️' },
+      { name: 'TypeScript', icon: '📘' },
+      { name: 'JavaScript', icon: '⚡' },
+      { name: 'R', icon: '📊' },
+      { name: 'Pandas', icon: '🐼' },
+      { name: 'NumPy', icon: '🔢' },
+      { name: 'Matplotlib', icon: '📈' },
+    ],
+  },
+  {
+    category: 'Database & Storage',
+    tools: [
+      { name: 'PostgreSQL', icon: '🐘' },
+      { name: 'MySQL', icon: '🐬' },
+      { name: 'MongoDB', icon: '🍃' },
+      { name: 'Redis', icon: '🔴' },
+      { name: 'PostGIS', icon: '🌍' },
+      { name: 'SQLite', icon: '📦' },
+    ],
+  },
+  {
+    category: 'Data Engineering & BI',
+    tools: [
+      { name: 'Apache Airflow', icon: '🌀' },
+      { name: 'Apache Kafka', icon: '📡' },
+      { name: 'Apache Spark', icon: '✨' },
+      { name: 'dbt', icon: '🔧' },
+      { name: 'Grafana', icon: '📊' },
+      { name: 'Metabase', icon: '📋' },
+    ],
+  },
+  {
+    category: 'Container & Infrastruktur',
+    tools: [
+      { name: 'Docker', icon: '🐳' },
+      { name: 'Docker Compose', icon: '🐋' },
+      { name: 'Git', icon: '📂' },
+      { name: 'GitHub', icon: '🐙' },
+      { name: 'Linux', icon: '🐧' },
+      { name: 'Nginx', icon: '🌐' },
+    ],
+  },
+  {
+    category: 'AI / ML',
+    tools: [
+      { name: 'TensorFlow', icon: '🧠' },
+      { name: 'PyTorch', icon: '🔥' },
+      { name: 'OpenCV', icon: '👁️' },
+      { name: 'YOLO', icon: '🎯' },
+      { name: 'Scikit-learn', icon: '🔬' },
+      { name: 'Hugging Face', icon: '🤗' },
+    ],
+  },
+  {
+    category: 'Platform',
+    tools: [
+      { name: 'FastAPI', icon: '⚡' },
+      { name: 'React', icon: '⚛️' },
+      { name: 'Vite', icon: '🚀' },
+      { name: 'Vercel', icon: '▲' },
+      { name: 'Google Colab', icon: '📓' },
+      { name: 'VS Code', icon: '💻' },
+    ],
+  },
+];
