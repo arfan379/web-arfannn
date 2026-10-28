@@ -10,6 +10,20 @@ interface Props {
   isLast: boolean;
 }
 
+function formatPoint(text: string) {
+  const parts = text.split(/(\*\*.*?\*\*)/g);
+  return parts.map((part, index) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return (
+        <strong key={index} className="font-semibold text-gray-900 dark:text-gray-100">
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+    return part;
+  });
+}
+
 export default function TimelineItem({ experience, index, isLast }: Props) {
   const [openCategory, setOpenCategory] = useState<string | null>(
     experience.groups.length > 0 && experience.groups[0].category
@@ -100,9 +114,9 @@ export default function TimelineItem({ experience, index, isLast }: Props) {
                         >
                           <ul className="px-4 pb-3 space-y-2">
                             {group.points.map((point, i) => (
-                              <li key={i} className="flex gap-2 text-sm" style={{ color: 'var(--color-text-secondary)' }}>
+                              <li key={i} className="flex gap-2 text-sm leading-relaxed" style={{ color: 'var(--color-text-secondary)' }}>
                                 <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: 'var(--color-brand)' }} />
-                                {point}
+                                <span>{formatPoint(point)}</span>
                               </li>
                             ))}
                           </ul>
@@ -113,11 +127,11 @@ export default function TimelineItem({ experience, index, isLast }: Props) {
                 ))}
               </div>
             ) : (
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 {experience.groups[0]?.points.map((point, i) => (
-                  <li key={i} className="flex gap-2 text-sm" style={{ color: 'var(--color-text-secondary)' }}>
+                  <li key={i} className="flex gap-2 text-sm leading-relaxed" style={{ color: 'var(--color-text-secondary)' }}>
                     <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ backgroundColor: 'var(--color-brand)' }} />
-                    {point}
+                    <span>{formatPoint(point)}</span>
                   </li>
                 ))}
               </ul>

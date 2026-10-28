@@ -13,7 +13,7 @@ export const profile: Profile = {
     'Sebelumnya, selama satu tahun magang di CV Karya Hidup Sentosa, saya membangun sistem Computer Vision untuk inspeksi visual produk, mengembangkan pipeline data engineering dengan Apache Airflow dan PostgreSQL, serta membangun dashboard analitik dan aplikasi web.',
     'Saya menguasai berbagai teknologi mulai dari Python, SQL, TensorFlow, hingga Docker dan Apache Kafka. Saya selalu bersemangat untuk belajar dan mengembangkan solusi teknologi yang berdampak.'
   ],
-  photo: '/assets/profile/arfan.webp',
+  photo: '/assets/profile/image.png',
 };
 
 export const experiences: Experience[] = [
@@ -21,7 +21,7 @@ export const experiences: Experience[] = [
     role: 'Data Engineer',
     company: 'Frontier Group',
     period: 'Juli 2026 – Sekarang',
-    logo: '/assets/logos/frontier.png',
+    logo: '/assets/logos/front.png',
     groups: [
       {
         points: [
@@ -38,38 +38,20 @@ export const experiences: Experience[] = [
     role: 'Internship AI & Data Engineer',
     company: 'CV Karya Hidup Sentosa',
     period: 'Mei 2025 – Mei 2026',
-    logo: '/assets/logos/karya-hidup-sentosa.png',
+    logo: '/assets/logos/khs.png',
     groups: [
       {
-        category: 'Computer Vision & AI',
         points: [
-          'Membangun sistem inspeksi visual produk menggunakan kamera industri dan computer vision (OpenCV, YOLO, TensorFlow).',
-          'Melatih dan mengoptimasi model deteksi objek serta klasifikasi cacat produk.',
-          'Mengembangkan pipeline inferensi real-time yang efisien untuk lini produksi.',
-        ],
-      },
-      {
-        category: 'Data Engineering & Analytics',
-        points: [
-          'Merancang dan mengimplementasikan pipeline data dengan Apache Airflow dan PostgreSQL.',
-          'Membangun ETL untuk mengonsolidasi data produksi dari berbagai mesin dan sensor.',
-          'Membuat dashboard analitik menggunakan Grafana dan Metabase untuk monitoring KPI produksi.',
-        ],
-      },
-      {
-        category: 'Web Development & Database',
-        points: [
-          'Mengembangkan aplikasi web internal menggunakan FastAPI (backend) dan React (frontend).',
-          'Mendesain dan mengelola database PostgreSQL untuk sistem manajemen produksi.',
-          'Membuat RESTful API untuk integrasi antar sistem.',
-        ],
-      },
-      {
-        category: 'Deployment & Kolaborasi',
-        points: [
-          'Melakukan deployment aplikasi menggunakan Docker dan Docker Compose.',
-          'Mengelola version control dengan Git dan berkolaborasi melalui GitHub.',
-          'Mendokumentasikan proses dan prosedur teknis untuk tim.',
+          '**Face Recognition Attendance System** — Mengembangkan aplikasi absensi berbasis facial recognition menggunakan InsightFace untuk digunakan di berbagai departemen perusahaan.',
+          '**Smart CCTV for PPE Detection** — Mengembangkan sistem deteksi kepatuhan penggunaan APD, seperti helm dan topi keselamatan, menggunakan RF-DETR.',
+          '**Kaizen A3 Report OCR** — Mengembangkan sistem ekstraksi teks dari laporan A3 Kaizen menggunakan PaddleOCR.',
+          '**API Development with FastAPI** — Mengimplementasikan FastAPI untuk integrasi dan pertukaran data antar sistem pada berbagai proyek AI.',
+          '**AI Model Evaluation Dashboard** — Mengembangkan dashboard untuk memantau, mengevaluasi, dan membandingkan performa model AI.',
+          '**Spare Parts Sales Dashboard** — Membuat dashboard analisis penjualan spare part menggunakan Metabase untuk mendukung analisis data bisnis.',
+          '**Oracle to PostgreSQL ETL Pipeline** — Membangun pipeline ETL menggunakan Apache Airflow untuk mengotomatisasi migrasi data dari Oracle ke PostgreSQL sebagai sumber data Metabase.',
+          '**Spare Parts Counting Application** — Mengembangkan aplikasi penghitung spare part untuk mendukung proses inventarisasi di gudang finished goods.',
+          '**Infrared Face Recognition System** — Mengembangkan sistem absensi berbasis facial recognition menggunakan Raspberry Pi dan kamera inframerah untuk meningkatkan keandalan pengenalan wajah dan mengurangi kesalahan deteksi.',
+          '**Work Habit Behavior Detection** — Mengembangkan sistem deteksi perilaku dan kebiasaan kerja menggunakan HRNet dan computer vision untuk mendukung pemantauan aktivitas kerja karyawan.',
         ],
       },
     ],
@@ -84,7 +66,7 @@ export const projects: Project[] = [
     description: 'Platform simulasi keuangan menggunakan komputasi kuantum untuk optimasi portofolio dan analisis risiko. Proyek ini mengimplementasikan algoritma quantum computing seperti QAOA dan VQE untuk menyelesaikan masalah optimasi portofolio keuangan. Dibangun dengan Python, Qiskit, dan FastAPI sebagai backend, serta React untuk dashboard interaktif.',
     tech: ['Python', 'Qiskit', 'FastAPI', 'React', 'PostgreSQL'],
     category: ['AI/ML', 'Finance', 'Quantum Computing'],
-    github: 'https://github.com/arfanindra',
+    github: 'https://github.com/arfan379/simulasi-quantum-finance',
   },
   {
     slug: 'magma-iq',
