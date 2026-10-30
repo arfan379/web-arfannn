@@ -1,4 +1,4 @@
-import type { Profile, Experience, Project, AcademicProject, AcademicDocumentation, ToolItem } from '../types';
+import type { Profile, Experience, Project, AcademicProject, ToolItem } from '../types';
 
 export const profile: Profile = {
   name: 'Arfan Indra Kurniawan',
@@ -98,48 +98,43 @@ export const projects: Project[] = [
 ];
 
 // ==========================================
-// DOKUMENTASI AKADEMIK / FOTO KEGIATAN
-// Tambah foto baru cukup dengan menambahkan objek di dalam array ini:
-// {
-//   image: '/assets/academic/nama-foto.jpg',
-//   title: 'Judul Dokumentasi (Opsional)',
-//   caption: 'Keterangan kegiatan (Opsional)',
-//   date: '2024' (Opsional)
-// }
+// PROYEK AKADEMIK — SMK Negeri 2 Klaten
+// Tiap proyek bisa diberi 1 foto atau lebih di bagian atasnya!
+// Cara tambah/ganti foto:
+// 1. Taruh file foto di folder: public/assets/academic/
+// 2. Tulis nama filenya di properti 'image' pada proyek terkait:
+//    - 1 foto: image: '/assets/academic/nama-foto.jpg'
+//    - Banyak foto: image: ['/assets/academic/foto1.jpg', '/assets/academic/foto2.jpg']
+//    - Tanpa foto: cukup hapus atau kosongkan baris 'image'
 // ==========================================
-export const academicDocumentations: AcademicDocumentation[] = [
-  {
-    image: '/assets/academic/dokumentasi-1.webp',
-    title: 'Aktivitas Praktikum & Riset Teknologi',
-    caption: 'Dokumentasi kegiatan riset, praktikum laboratorium komputer, dan kolaborasi proyek teknologi di SMK Negeri 2 Klaten.',
-    date: '2022–2026',
-  },
-];
-
 export const academicProjects: AcademicProject[] = [
   {
     title: 'Clustering Genre Musik',
     description: 'Analisis dan pengelompokan genre musik menggunakan teknik machine learning clustering (K-Means, DBSCAN) berdasarkan fitur audio seperti tempo, energy, dan danceability dari dataset Spotify.',
     link: 'https://colab.research.google.com/',
     linkLabel: 'Buka di Google Colab',
+    image: '/assets/academic/dokumentasi-1.webp',
   },
   {
     title: 'Analisis Tren Suhu Kota Yogyakarta (Mann-Kendall)',
     description: 'Analisis tren perubahan suhu di Kota Yogyakarta menggunakan uji statistik Mann-Kendall untuk mendeteksi tren monoton dalam data time series suhu selama 20 tahun terakhir.',
     link: 'https://colab.research.google.com/',
     linkLabel: 'Buka di Google Colab',
+    image: '/assets/academic/tren-suhu.webp',
   },
   {
     title: 'Analisis Urbanisasi di Indonesia',
     description: 'Studi komprehensif tentang pola urbanisasi di Indonesia menggunakan data BPS, visualisasi geospasial, dan analisis statistik untuk memahami perpindahan penduduk dari desa ke kota.',
     link: 'https://www.linkedin.com/in/arfan-indra-kurniawan/',
     linkLabel: 'Lihat di LinkedIn',
+    // image: '/assets/academic/urbanisasi.jpg', // Kosongkan bila belum ada foto
   },
   {
     title: 'Real-Time E-Commerce Clickstream Analytics Pipeline',
     description: 'Pipeline data engineering untuk menganalisis clickstream e-commerce secara real-time menggunakan Apache Kafka, Apache Spark Streaming, dan PostgreSQL. Dilengkapi dashboard Grafana untuk monitoring.',
     link: 'https://github.com/arfanindra',
     linkLabel: 'Lihat di GitHub',
+    // image: '/assets/academic/clickstream.jpg', // Kosongkan bila belum ada foto
   },
 ];
 
