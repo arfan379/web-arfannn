@@ -38,15 +38,6 @@ export interface AcademicProject {
   description: string;
   link: string;
   linkLabel: string;
-  image?: string | string[];
-}
-
-
-export interface AcademicDocumentation {
-  image: string;
-  title?: string;
-  caption?: string;
-  date?: string;
 }
 
 export interface ToolItem {
@@ -54,5 +45,6 @@ export interface ToolItem {
   logo: string;
   description: string;
 }
+
 
 
