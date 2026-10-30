@@ -1,4 +1,4 @@
-import type { Profile, Experience, Project, AcademicProject, ToolItem } from '../types';
+import type { Profile, Experience, Project, AcademicProject, AcademicDocumentation, ToolItem } from '../types';
 
 export const profile: Profile = {
   name: 'Arfan Indra Kurniawan',
@@ -94,6 +94,25 @@ export const projects: Project[] = [
     tech: ['Apache Kafka', 'Apache Airflow', 'dbt', 'PostgreSQL', 'React', 'Docker', 'Grafana'],
     category: ['Data Engineering', 'Analytics', 'Transportation'],
     github: 'https://github.com/arfanindra',
+  },
+];
+
+// ==========================================
+// DOKUMENTASI AKADEMIK / FOTO KEGIATAN
+// Tambah foto baru cukup dengan menambahkan objek di dalam array ini:
+// {
+//   image: '/assets/academic/nama-foto.jpg',
+//   title: 'Judul Dokumentasi (Opsional)',
+//   caption: 'Keterangan kegiatan (Opsional)',
+//   date: '2024' (Opsional)
+// }
+// ==========================================
+export const academicDocumentations: AcademicDocumentation[] = [
+  {
+    image: '/assets/academic/dokumentasi-1.webp',
+    title: 'Aktivitas Praktikum & Riset Teknologi',
+    caption: 'Dokumentasi kegiatan riset, praktikum laboratorium komputer, dan kolaborasi proyek teknologi di SMK Negeri 2 Klaten.',
+    date: '2022–2026',
   },
 ];
 

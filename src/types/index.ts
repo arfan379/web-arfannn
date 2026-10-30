@@ -40,9 +40,17 @@ export interface AcademicProject {
   linkLabel: string;
 }
 
+export interface AcademicDocumentation {
+  image: string;
+  title?: string;
+  caption?: string;
+  date?: string;
+}
+
 export interface ToolItem {
   name: string;
   logo: string;
   description: string;
 }
+
 
