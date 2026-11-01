@@ -75,7 +75,7 @@ export const projects: Project[] = [
     description: 'MAGMA-IQ (Manufacturing Automated Grading & Monitoring Analytics - Intelligent Quality) adalah sistem intelligent quality control berbasis AI. Sistem ini menggunakan computer vision dan deep learning untuk mendeteksi cacat produk secara otomatis pada lini produksi. Dilengkapi dengan dashboard monitoring real-time dan sistem alerting.',
     tech: ['Python', 'TensorFlow', 'OpenCV', 'FastAPI', 'PostgreSQL', 'Docker'],
     category: ['AI/ML', 'Computer Vision', 'Manufacturing'],
-    github: 'https://github.com/arfanindra',
+    github: 'https://github.com/arfan379/Multi-Modal-Volcanic-Activity-Forecasting-Risk-Intelligence-Engine.git',
   },
   {
     slug: 'siaga-api',
@@ -84,7 +84,7 @@ export const projects: Project[] = [
     description: 'SIAGA-API (Sistem Informasi dan Analisis Geospasial API) adalah RESTful API untuk sistem informasi dan pengelolaan data bencana alam Indonesia secara real-time. Menyediakan endpoint untuk data gempa bumi, cuaca, dan peringatan dini. Dibangun dengan FastAPI dan menggunakan PostgreSQL dengan PostGIS untuk query geospasial.',
     tech: ['Python', 'FastAPI', 'PostgreSQL', 'PostGIS', 'Docker', 'Redis'],
     category: ['Backend', 'Geospatial', 'API'],
-    github: 'https://github.com/arfanindra',
+    github: 'https://github.com/arfan379/lahan-hutan-arfan',
   },
   {
     slug: 'itma',
@@ -93,7 +93,7 @@ export const projects: Project[] = [
     description: 'ITMA (Integrated Transportation Management & Analytics) adalah platform analisis dan optimasi transportasi berbasis data. Menggunakan Apache Kafka untuk streaming data real-time, Apache Airflow untuk orchestrasi pipeline, dan dbt untuk transformasi data. Dashboard dibangun dengan React dan Grafana.',
     tech: ['Apache Kafka', 'Apache Airflow', 'dbt', 'PostgreSQL', 'React', 'Docker', 'Grafana'],
     category: ['Data Engineering', 'Analytics', 'Transportation'],
-    github: 'https://github.com/arfanindra',
+    github: 'https://github.com/arfan379/itma.git',
   },
 ];
 
